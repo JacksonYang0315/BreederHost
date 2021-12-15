@@ -3,8 +3,8 @@ const path = require('path');
 
 const app = express();
 const port = process.env.PORT || 3000;
-app.use('/Build', express.static(__dirname+'Build'));
-app.use('/TemplateData', express.static(__dirname+'TemplateData'));
+app.use('/Build', express.static(__dirname+'/Build'));
+app.use('/TemplateData', express.static(__dirname+'/TemplateData'));
 // sendFile will go here
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '/index.html'));
